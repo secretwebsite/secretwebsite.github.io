@@ -3,7 +3,7 @@ function change()
     setInterval(function(){
         var num = Math.ceil(Math.random()*14);
         console.log(num);
-        $("#loveBox").attr("src","hearts/"+num+".png");
+        $("#loveBox").attr("src",num+".png");
     }, 100);
 }
 $(document).ready(function(){
