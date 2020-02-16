@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Hooman Love;
-    src: url("Hooman\ Love.otf") format("opentype");
+    font-family: valentine;
+    src: url("valentine.otf") format("opentype");
 }
 body
 {
@@ -12,8 +12,35 @@ body
 }
 h1
 {
-    font-family: 'Hooman Love', serif;
-    font-size: 48px;
+    font-family: "valentine";
+    animation: fadeIn ease 5s;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fadeOut
+{
+    animation: fadeOut ease 5s;
+}
+#title
+{
+    top: 20%;
+}
+#line1
+{
+    top: 30%;
+}
+#line2
+{
+    top: 40%;
+}
+#line3
+{
+    top: 50%;
+}
+#line4
+{
+    top: 60%;
 }
 #titleBox
 {
@@ -23,11 +50,55 @@ h1
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#title
+#play
 {
-    margin:0;
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#loveBox
+{
+    width: 128px;
+    height: 128px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rotate {
+    animation: rotation 1s linear forwards;
+}
+@keyframes rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20%{
+        top: 70%;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(359deg);
+        top: -30%;
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }  
