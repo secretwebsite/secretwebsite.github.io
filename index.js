@@ -1,8 +1,10 @@
 function change()
 {
+    var num = 1;
     setInterval(function(){
-        var num = Math.ceil(Math.random()*14);
-        console.log(num);
+        var t = Math.ceil(Math.random()*14);
+        while(t==num) t = Math.ceil(Math.random()*14);
+        num = t;
         $("#loveBox").attr("src",num+".png");
     }, 100);
 }
@@ -25,7 +27,7 @@ $(document).ready(function(){
                                 $("h1").fadeOut("slow",function(){});
                                 setTimeout(function(){
                                     $("h1").remove();
-                                    $("#titleBox").append("<img id=\"loveBox\" src=\"\" />");
+                                    $("#titleBox").append("<img id=\"loveBox\" src=\"1.png\" />");
                                     change();
                                 },2000);
                             },2000);
